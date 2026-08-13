@@ -1,0 +1,26 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# Node (not currently used by this static site, but ignored defensively)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+
+# Local dev tooling (Claude Code session helper scripts, not part of the site)
+.claude/
+
+# Raw/unprocessed source media — originals live outside the repo;
+# only the optimized files actually used by the site live in assets/
+Media/

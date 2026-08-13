@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserva Las Palmas — Reserva Natural Privada, San Juanito (Meta)</title>
+<meta name="description" content="Reserva Las Palmas es una reserva natural privada de bosque andino en San Juanito, Meta, Colombia. Conservación, investigación científica y turismo de naturaleza en 32.6 hectáreas junto al Parque Nacional Natural Chingaza.">
+<link rel="icon" href="assets/img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-lang="es">Saltar al contenido principal</a>
+<a class="skip-link" href="#main" data-lang="en" hidden>Skip to main content</a>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner container">
+    <a class="brand" href="#inicio">
+      <img src="assets/img/logo.jpg" alt="Reserva Las Palmas" class="brand-mark">
+      <span class="brand-name">
+        <span data-lang="es">Reserva Las Palmas</span>
+        <span data-lang="en" hidden>Las Palmas Reserve</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#inicio"><span data-lang="es">Inicio</span><span data-lang="en" hidden>Home</span></a></li>
+        <li><a href="#quienes-somos"><span data-lang="es">Quiénes somos</span><span data-lang="en" hidden>About us</span></a></li>
+        <li><a href="#la-reserva"><span data-lang="es">La Reserva</span><span data-lang="en" hidden>The Reserve</span></a></li>
+        <li><a href="#nuestro-camino"><span data-lang="es">Nuestro Camino</span><span data-lang="en" hidden>Our Journey</span></a></li>
+        <li><a href="#fundacion-cuacha"><span data-lang="es">Fundación Cuacha</span><span data-lang="en" hidden>Fundación Cuacha</span></a></li>
+        <li><a href="#contacto" class="nav-cta"><span data-lang="es">Involúcrate</span><span data-lang="en" hidden>Get Involved</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Cambiar idioma / Switch language">
+        <span class="lang-toggle-es">ES</span> / <span class="lang-toggle-en">EN</span>
+      </button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== INICIO / HERO ===================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-media">
+      <video class="hero-video" autoplay muted loop playsinline preload="none" poster="assets/img/wax-palms-blue-sky.jpg">
+        <source src="assets/video/hero.mp4" type="video/mp4">
+      </video>
+      <img class="hero-fallback" src="assets/img/wax-palms-blue-sky.jpg" alt="">
+      <div class="hero-scrim"></div>
+    </div>
+
+    <div class="hero-content container">
+      <p class="eyebrow reveal">
+        <span data-lang="es">Primera Reserva Natural de la Sociedad Civil de San Juanito, Meta</span>
+        <span data-lang="en" hidden>The First Civil Society Nature Reserve of San Juanito, Meta</span>
+      </p>
+      <h1 class="hero-title reveal">
+        <span data-lang="es">Un refugio de bosque andino para investigar, educar, restaurar y conservar</span>
+        <span data-lang="en" hidden>An Andean cloud forest sanctuary for research, education, restoration, and conservation</span>
+      </h1>
+      <div class="hero-actions reveal">
+        <a href="#la-reserva" class="btn btn-primary">
+          <span data-lang="es">Conoce la reserva</span>
+          <span data-lang="en" hidden>Explore the reserve</span>
+        </a>
+        <a href="#contacto" class="btn btn-ghost">
+          <span data-lang="es">Apóyanos</span>
+          <span data-lang="en" hidden>Support us</span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===================== QUIENES SOMOS ===================== -->
+  <section class="section" id="quienes-somos">
+    <div class="container section-grid">
+      <div class="section-media">
+        <div class="gallery" id="gallery-quienes-somos">
+          <div class="gallery-track">
+            <img src="assets/img/nosotros-cabana.jpg" class="gallery-slide is-active" alt="María Emilia y Nicolás asomados a la ventana de la cabaña en construcción" loading="lazy">
+            <img src="assets/img/mules-trail.jpg" class="gallery-slide" alt="Mulas cargando materiales de construcción por el camino de herradura hacia la reserva" loading="lazy">
+            <img src="assets/img/nicolas-mula.jpg" class="gallery-slide" alt="Nicolás junto a una mula de carga, con la cabaña en construcción al fondo" loading="lazy">
+            <img src="assets/img/maria-emilia-caballo.jpg" class="gallery-slide" alt="María Emilia junto a un caballo en la reserva" loading="lazy">
+            <img src="assets/img/wax-palms-blue-sky.jpg" class="gallery-slide" alt="Palmas de cera de la reserva bajo cielo despejado" loading="lazy">
+            <img src="assets/img/pareja-valle.jpg" class="gallery-slide" alt="María Emilia y Nicolás en el valle de la reserva" loading="lazy">
+          </div>
+          <button type="button" class="gallery-arrow gallery-prev" data-label-es="Foto anterior" data-label-en="Previous photo" aria-label="Foto anterior"></button>
+          <button type="button" class="gallery-arrow gallery-next" data-label-es="Foto siguiente" data-label-en="Next photo" aria-label="Foto siguiente"></button>
+          <div class="gallery-dots" role="tablist" data-label-es="Seleccionar foto" data-label-en="Select photo" aria-label="Seleccionar foto"></div>
+        </div>
+      </div>
+      <div class="section-copy">
+        <p class="eyebrow">
+          <span data-lang="es">Quiénes somos</span>
+          <span data-lang="en" hidden>About us</span>
+        </p>
+        <h2>
+          <span data-lang="es">Nico y Maria E</span>
+          <span data-lang="en" hidden>Nico &amp; Maria E</span>
+        </h2>
+        <p data-lang="es">Somos una pareja de ecólogos que a principios de 2025 se decidió mudar al municipio de San Juanito y adquirir un predio con un objetivo claro: crear una reserva natural.</p>
+        <p data-lang="en" hidden>We are a couple of ecologists who, in early 2025, decided to move to the municipality of San Juanito and acquire a piece of land with one clear goal: to create a nature reserve.</p>
+
+        <p data-lang="es">Reserva Las Palmas es una apuesta de vida construida desde la experiencia de campo, la investigación y el compromiso cotidiano con los bosques andinos. Una parte significativa del predio corresponde a bosque maduro que nunca ha sido aprovechado, lo que le otorga un altísimo valor ecológico y un gran potencial para la investigación científica.</p>
+        <p data-lang="en" hidden>Reserva Las Palmas is a life's commitment, built from field experience, research, and daily dedication to Andean forests. A significant portion of the land is mature forest that has never been logged, which gives it exceptional ecological value and great potential for scientific research.</p>
+
+        <p data-lang="es">Por esta riqueza natural, el proyecto está enfocado en atraer a la comunidad científica y educativa, ofreciendo un espacio para explorar, estudiar y aprender de un ecosistema de montaña poco investigado y de alta biodiversidad. Al mismo tiempo, buscamos abrir espacios de educación experiencial para que niños y jóvenes del territorio crezcan en contacto directo con el bosque que los rodea.</p>
+        <p data-lang="en" hidden>Because of this natural richness, the project is focused on engaging the scientific and educational community, offering a space to explore, study, and learn from an under-researched, highly biodiverse mountain ecosystem. At the same time, we hope to open experiential education spaces so that children and young people from the area can grow up in direct contact with the forest around them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LA RESERVA ===================== -->
+  <section class="section section-dark" id="la-reserva">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">
+          <span data-lang="es">La Reserva</span>
+          <span data-lang="en" hidden>The Reserve</span>
+        </p>
+        <h2>
+          <span data-lang="es">Bosque de niebla en la Cordillera Oriental</span>
+          <span data-lang="en" hidden>Cloud forest in the Eastern Andes</span>
+        </h2>
+        <p class="section-lede" data-lang="es">Somos la primera reserva natural del municipio de San Juanito. Aunque gran parte del predio fue usado para ganadería por más de 60 años, aún conserva bosque de niebla en muy buen estado, gracias a que el predio no tiene acceso con carretera.</p>
+        <p class="section-lede" data-lang="en" hidden>We are the first nature reserve in the municipality of San Juanito. Although much of the property was used for cattle ranching for more than 60 years, it still preserves cloud forest in excellent condition, thanks to the fact that the land has no road access.</p>
+
+        <p class="section-lede" data-lang="es">Por el momento no tenemos los primeros inventarios de biodiversidad, pero sabemos que nos encontramos entre el AICA de la cuenca del río Guatiquía y el AICA del Parque Nacional Chingaza, y muy cerca del KBA del mismo parque; lo que nos convierte en un hotspot de biodiversidad aún por descubrir.</p>
+        <p class="section-lede" data-lang="en" hidden>We don't yet have the reserve's first biodiversity inventories, but we know we sit between the Guatiquía River Basin Important Bird Area (AICA) and the Chingaza National Park Important Bird Area (AICA), and very close to the same park's Key Biodiversity Area (KBA) — making us a biodiversity hotspot still waiting to be discovered.</p>
+      </div>
+
+      <div class="reserve-media">
+        <img src="assets/img/aerial-cloudforest.jpg" alt="Vista aérea de niebla sobre el bosque andino de la reserva" loading="lazy">
+      </div>
+
+      <div class="reserve-map">
+        <h3><span data-lang="es">Ubicación</span><span data-lang="en" hidden>Location</span></h3>
+        <div class="location-grid">
+          <div class="location-copy">
+            <p data-lang="es">Ubicada en la vereda San Luis de Toledo, San Juanito (Meta), la reserva colinda con el Parque Nacional Natural Chingaza y se encuentra en un punto estratégico del municipio: está en la frontera entre las áreas de desarrollo agropecuario y extensas zonas de bosque primario, donde además se encuentra la población más grande de palma de cera de la cordillera oriental.</p>
+            <p data-lang="en" hidden>Located in the San Luis de Toledo district, San Juanito (Meta), the reserve borders Chingaza National Natural Park and sits at a strategic point in the municipality: on the frontier between areas of agricultural development and extensive primary forest zones, home to the largest wax palm population in the Eastern Andes.</p>
+            <p data-lang="es">En este mapa puedes encontrar nuestra ubicación en Google Maps, explorar nuestro plan de manejo y ver cómo llegar desde el centro urbano:</p>
+            <p data-lang="en" hidden>On this map you can find our location on Google Maps, explore our management plan, and see how to get here from town:</p>
+            <a class="map-link" href="https://maps.app.goo.gl/asPWtkc29GCMWCLE9" target="_blank" rel="noopener">
+              <span data-lang="es">Ver en Google Maps</span>
+              <span data-lang="en" hidden>View on Google Maps</span>
+            </a>
+          </div>
+          <div class="location-media">
+            <div class="map-embed" id="reserve-map" role="img" aria-label="Mapa satelital con el polígono de la reserva"></div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="fact-strip fact-strip-dark">
+        <li><strong>32.6 ha</strong><span data-lang="es">área total</span><span data-lang="en" hidden>total area</span></li>
+        <li><strong>17.2 ha</strong><span data-lang="es">bosque en conservación</span><span data-lang="en" hidden>forest under conservation</span></li>
+        <li><strong>6.8 ha</strong><span data-lang="es">área de restauración</span><span data-lang="en" hidden>restoration area</span></li>
+        <li><strong>2025</strong><span data-lang="es">inicio del proyecto</span><span data-lang="en" hidden>project began</span></li>
+      </ul>
+
+      <div class="biodiversity-grid">
+        <div class="biodiversity-card">
+          <img src="assets/img/valley-cows.jpg" alt="Valle andino con pastizales y ganado en la zona de amortiguación" loading="lazy">
+          <h4><span data-lang="es">Clima</span><span data-lang="en" hidden>Climate</span></h4>
+          <p data-lang="es">La reserva se encuentra en una franja de bosque andino de niebla, entre los 2.200 y 2.400 msnm. El clima cuenta con presencia frecuente de niebla y nubes bajas durante buena parte del año. Las temperaturas oscilan generalmente entre 12°C y 20°C, y la precipitación es alta, como corresponde a la zona de influencia de Chingaza, uno de los sistemas más lluviosos de la cordillera oriental.</p>
+          <p data-lang="en" hidden>The reserve sits within a band of Andean cloud forest, between 2,200 and 2,400 meters above sea level. The climate features frequent fog and low clouds for much of the year. Temperatures generally range between 12°C and 20°C, and rainfall is high, consistent with the area of influence of Chingaza, one of the rainiest systems in the Eastern Andes.</p>
+        </div>
+        <div class="biodiversity-card">
+          <img src="assets/img/parrots-nest.jpg" alt="Loros orejiamarillos asomados a sus nidos en un tronco de palma" loading="lazy">
+          <h4><span data-lang="es">Fauna y flora</span><span data-lang="en" hidden>Wildlife &amp; flora</span></h4>
+          <p data-lang="es">La reserva y sus zonas aledañas albergan una gran diversidad de flora y fauna, con varias especies endémicas y raras. Entre ellas se encuentran el loro orejiamarillo (<em>Ognorhynchus icterotis</em>), el águila andina (<em>Spizaetus isidori</em>), abejas nativas sin aguijón (<em>Melipona nigrescens</em>) y dos especies de palma de cera (<em>Ceroxylon quindiuense</em> y <em>C. vogelianum</em>), además de una importante diversidad de aves y orquídeas.</p>
+          <p data-lang="en" hidden>The reserve and its surrounding areas are home to a great diversity of flora and fauna, including several endemic and rare species. Among them are the yellow-eared parrot (<em>Ognorhynchus icterotis</em>), the Andean eagle (<em>Spizaetus isidori</em>), stingless native bees (<em>Melipona nigrescens</em>), and two species of wax palm (<em>Ceroxylon quindiuense</em> and <em>C. vogelianum</em>), along with a significant diversity of birds and orchids.</p>
+        </div>
+        <div class="biodiversity-card">
+          <img src="assets/img/bosque-primario-ladera.jpg" alt="Ladera de bosque primario maduro sobre potreros de la reserva" loading="lazy">
+          <h4><span data-lang="es">Bosque primario</span><span data-lang="en" hidden>Primary forest</span></h4>
+          <p data-lang="es">Este bosque alberga especies arbóreas de gran valor como el encenillo (<em>Weinmannia tomentosa</em>), el amarillo (<em>Ocotea pedicellata</em>), el lacre (<em>Vismia sp.</em>), la cuacha (<em>Hyeronima rufa</em>) y muchas otras. La presencia de árboles maduros de estas especies, que en otras zonas del país han sido fuertemente explotadas, hace de este bosque un espacio único para estudiar e investigar.</p>
+          <p data-lang="en" hidden>This forest is home to highly valuable tree species such as encenillo (<em>Weinmannia tomentosa</em>), amarillo (<em>Ocotea pedicellata</em>), lacre (<em>Vismia sp.</em>), cuacha (<em>Hyeronima rufa</em>), and many others. The presence of mature trees of these species — heavily exploited elsewhere in the country — makes this forest a unique place to study and research.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EN QUE ESTAMOS (TIMELINE) ===================== -->
+  <section class="section section-camino" id="nuestro-camino">
+    <div class="container">
+      <div class="section-head">
+        <h2>
+          <span data-lang="es">Nuestro Camino</span>
+          <span data-lang="en" hidden>Our Journey</span>
+        </h2>
+        <p class="section-lede" data-lang="es">Desde 2025 hemos ido construyendo, aprendiendo y descubriendo cómo conservar este territorio. Este es el camino que hemos recorrido y los pasos que nos esperan.</p>
+        <p class="section-lede" data-lang="en" hidden>Since 2025 we've been building, learning, and discovering how to conserve this land. This is the path we've walked so far, and the steps that lie ahead.</p>
+      </div>
+
+      <div class="camino">
+        <div class="camino-track" aria-hidden="true">
+          <div class="camino-track-fill"></div>
+        </div>
+
+        <p class="camino-phase-label reveal">
+          <span data-lang="es">Pasado</span><span data-lang="en" hidden>Past</span>
+        </p>
+
+        <!-- EVENTO 01 -->
+        <div class="camino-item reveal" data-status="completado">
+          <div class="camino-marker"></div>
+          <div class="camino-content">
+            <button type="button" class="camino-summary" aria-expanded="false">
+              <span class="camino-summary-text">
+                <span class="camino-date"><span data-lang="es">Marzo 2025</span><span data-lang="en" hidden>March 2025</span></span>
+                <h3 class="camino-title"><span data-lang="es">Compra del predio Las Palmas</span><span data-lang="en" hidden>Buying the Las Palmas property</span></h3>
+                <span class="camino-status camino-status-completado"><span data-lang="es">Completado</span><span data-lang="en" hidden>Completed</span></span>
+              </span>
+              <span class="camino-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="camino-detail">
+              <div class="camino-detail-inner">
+                <div class="camino-detail-inner-content">
+                  <p data-lang="es">En marzo de 2025 comenzó el sueño de trabajar por la conservación. Compramos un predio de 32,8 hectáreas llamado Las Palmas, un lugar sin carretera, con hermosas vistas y abundante agua.</p>
+                  <p data-lang="en" hidden>In March 2025 the dream of working for conservation began. We bought a 32.8-hectare property called Las Palmas — a place with no road access, beautiful views, and abundant water.</p>
+                  <p data-lang="es">Sin un plan completamente definido, pero con una meta clara, decidimos aventurarnos a aprender a ser ecólogos con el bosque como laboratorio y de la mano de la comunidad que habita este territorio.</p>
+                  <p data-lang="en" hidden>Without a fully defined plan, but with a clear goal, we set out to learn to be ecologists with the forest as our laboratory, hand in hand with the community that lives in this territory.</p>
+                  <img class="camino-media-img" src="assets/img/camino-compra-predio.jpg" alt="María Emilia y Nicolás riendo en el predio recién adquirido, con palmas de cera al fondo" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EVENTO 02 -->
+        <div class="camino-item reveal" data-status="completado">
+          <div class="camino-marker"></div>
+          <div class="camino-content">
+            <button type="button" class="camino-summary" aria-expanded="false">
+              <span class="camino-summary-text">
+                <span class="camino-date"><span data-lang="es">Septiembre 2025</span><span data-lang="en" hidden>September 2025</span></span>
+                <h3 class="camino-title"><span data-lang="es">Nos asociamos a RESNATUR</span><span data-lang="en" hidden>We join RESNATUR</span></h3>
+                <span class="camino-status camino-status-completado"><span data-lang="es">Completado</span><span data-lang="en" hidden>Completed</span></span>
+              </span>
+              <span class="camino-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="camino-detail">
+              <div class="camino-detail-inner">
+                <div class="camino-detail-inner-content">
+                  <p data-lang="es">Decidimos asociarnos a la Red Colombiana de Reservas Naturales de la Sociedad Civil, dando a conocer nuestra intención de convertir el predio Las Palmas en Reserva.</p>
+                  <p data-lang="en" hidden>We decided to join the Colombian Network of Civil Society Nature Reserves, announcing our intention to turn the Las Palmas property into a reserve.</p>
+                  <p data-lang="es">Este fue nuestro primer paso para consolidar una iniciativa de conservación y aspirar a convertirnos en la primera Reserva Natural de la Sociedad Civil del municipio de San Juanito.</p>
+                  <p data-lang="en" hidden>This was our first step toward consolidating a conservation initiative and aspiring to become the first Civil Society Nature Reserve in the municipality of San Juanito.</p>
+                  <img class="camino-media-img" src="assets/img/camino-resnatur.png" alt="Certificado de asociación de Reserva Las Palmas a RESNATUR" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="camino-phase-label reveal">
+          <span data-lang="es">Presente</span><span data-lang="en" hidden>Present</span>
+        </p>
+
+        <!-- EVENTO 03 -->
+        <div class="camino-item reveal" data-status="en-ejecucion">
+          <div class="camino-marker"></div>
+          <div class="camino-content">
+            <button type="button" class="camino-summary" aria-expanded="false">
+              <span class="camino-summary-text">
+                <span class="camino-date"><span data-lang="es">Agosto 2025 — actualmente</span><span data-lang="en" hidden>August 2025 — ongoing</span></span>
+                <h3 class="camino-title"><span data-lang="es">Iniciamos la construcción de la cabaña</span><span data-lang="en" hidden>We start building the cabin</span></h3>
+                <span class="camino-status camino-status-en-ejecucion"><span data-lang="es">En ejecución</span><span data-lang="en" hidden>In progress</span></span>
+              </span>
+              <span class="camino-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="camino-detail">
+              <div class="camino-detail-inner">
+                <div class="camino-detail-inner-content">
+                  <p data-lang="es">En agosto de 2025 iniciamos la construcción de una cabaña rústica, hecha en su mayoría con madera obtenida del mismo predio.</p>
+                  <p data-lang="en" hidden>In August 2025 we began building a rustic cabin, made mostly from wood harvested on the property itself.</p>
+                  <p data-lang="es">Aunque inicialmente estimábamos que la construcción tomaría cuatro meses, todavía seguimos en obra debido a las dificultades logísticas.</p>
+                  <p data-lang="en" hidden>Although we initially estimated the construction would take four months, we're still working on it due to logistical challenges.</p>
+                  <p data-lang="es">Aun así, estamos muy orgullosos de lo que hemos logrado avanzar. Construir en este lugar significa enfrentarse a unas dificultades particulares: cuando los materiales no pueden llegar a lomo de mula, muchas veces toca transportarlos a hombro.</p>
+                  <p data-lang="en" hidden>Even so, we're very proud of how far we've come. Building in this place means facing particular difficulties: when materials can't reach us by mule, they often have to be carried in on someone's shoulders.</p>
+                  <video class="camino-media-video" controls preload="none" poster="assets/img/cabin-construction.jpg">
+                    <source src="assets/video/camino-cabana.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EVENTO 04 -->
+        <div class="camino-item reveal" data-status="en-ejecucion">
+          <div class="camino-marker"></div>
+          <div class="camino-content">
+            <button type="button" class="camino-summary" aria-expanded="false">
+              <span class="camino-summary-text">
+                <span class="camino-date"><span data-lang="es">Febrero 2026</span><span data-lang="en" hidden>February 2026</span></span>
+                <h3 class="camino-title"><span data-lang="es">Iniciamos el registro como Reserva Natural de la Sociedad Civil</span><span data-lang="en" hidden>We begin registering as a Civil Society Nature Reserve</span></h3>
+                <span class="camino-status camino-status-en-ejecucion"><span data-lang="es">En proceso</span><span data-lang="en" hidden>In progress</span></span>
+              </span>
+              <span class="camino-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="camino-detail">
+              <div class="camino-detail-inner">
+                <div class="camino-detail-inner-content">
+                  <p data-lang="es">Con el acompañamiento de Conservación Internacional, reunimos y presentamos la documentación necesaria ante Parques Nacionales Naturales para registrar Las Palmas como Reserva Natural de la Sociedad Civil.</p>
+                  <p data-lang="en" hidden>With support from Conservation International, we gathered and submitted the documentation required by Colombia's National Natural Parks agency to register Las Palmas as a Civil Society Nature Reserve.</p>
+                  <p data-lang="es">El proceso ya está en marcha y el 13 de agosto de 2026 recibiremos la visita técnica de Parques Nacionales, un paso fundamental antes de la decisión final de registro.</p>
+                  <p data-lang="en" hidden>The process is already underway, and on August 13, 2026 we'll receive the technical site visit from Parques Nacionales — a key step before the final registration decision.</p>
+                  <img class="camino-media-img" src="assets/img/camino-rnsc-mapa.jpg" alt="Mapa de zonificación presentado ante Parques Nacionales Naturales para el registro como RNSC" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ESTAMOS AQUI -->
+        <div class="camino-item camino-item-here reveal" data-status="completado">
+          <div class="camino-marker"></div>
+          <div class="camino-content">
+            <button type="button" class="camino-summary" aria-expanded="false">
+              <span class="camino-summary-text">
+                <span class="camino-here-badge">⭐ <span data-lang="es">Estamos aquí</span><span data-lang="en" hidden>We are here</span></span>
+                <span class="camino-date"><span data-lang="es">Agosto 2026</span><span data-lang="en" hidden>August 2026</span></span>
+                <h3 class="camino-title"><span data-lang="es">Nace Fundación Cuacha</span><span data-lang="en" hidden>Fundación Cuacha is born</span></h3>
+                <span class="camino-status camino-status-completado"><span data-lang="es">Completado</span><span data-lang="en" hidden>Completed</span></span>
+              </span>
+              <span class="camino-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="camino-detail">
+              <div class="camino-detail-inner">
+                <div class="camino-detail-inner-content">
+                  <p data-lang="es">En agosto de 2026 nace Fundación Cuacha, una organización creada para apoyar y financiar los objetivos de conservación y restauración de la Reserva.</p>
+                  <p data-lang="en" hidden>In August 2026, Fundación Cuacha was born — an organization created to support and finance the reserve's conservation and restoration goals.</p>
+                  <p data-lang="es">La Fundación busca convertirse en una herramienta para acceder a financiación de proyectos de conservación, investigación y restauración, tanto en Las Palmas como en otros territorios del país.</p>
+                  <p data-lang="en" hidden>The foundation aims to become a vehicle for accessing funding for conservation, research, and restoration projects, both at Las Palmas and in other territories across the country.</p>
+                  <p data-lang="es">Su propósito va más allá de la Reserva: queremos desarrollar proyectos de investigación, consultoría y restauración que contribuyan a la conservación de los ecosistemas en Colombia.</p>
+                  <p data-lang="en" hidden>Its purpose goes beyond the reserve: we want to develop research, consulting, and restoration projects that contribute to ecosystem conservation throughout Colombia.</p>
+                  <a href="#fundacion-cuacha" class="btn btn-primary camino-cta">
+                    <span data-lang="es">Conoce Fundación Cuacha →</span>
+                    <span data-lang="en" hidden>Meet Fundación Cuacha →</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="camino-transition reveal">
+          <p class="eyebrow">
+            <span data-lang="es">Hacia dónde vamos</span>
+            <span data-lang="en" hidden>Where we're headed</span>
+          </p>
+          <p data-lang="es">Lo que hemos hecho hasta ahora es apenas el comienzo. Estos son los próximos pasos para conocer, proteger, restaurar y hacer crecer la Reserva.</p>
+          <p data-lang="en" hidden>What we've done so far is just the beginning. These are the next steps to know, protect, restore, and grow the reserve.</p>
+        </div>
+
+        <p class="camino-phase-label reveal">
+          <span data-lang="es">Futuro</span><span data-lang="en" hidden>Future</span>
+        </p>
+
+        <!-- ETAPA 01 -->
+        <div class="camino-item camino-item-stage reveal" data-status="proximo">
+          <div class="camino-marker"></div>
+          <div class="camino-content">
+            <button type="button" class="camino-summary" aria-expanded="false">
+              <span class="camino-summary-text">
+                <span class="camino-date">2026–2027</span>
+                <h3 class="camino-title"><span data-lang="es">Etapa 01 — Conocer</span><span data-lang="en" hidden>Stage 01 — Know</span></h3>
+                <span class="camino-status camino-status-proximo"><span data-lang="es">Próximo</span><span data-lang="en" hidden>Upcoming</span></span>
+              </span>
+              <span class="camino-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="camino-detail">
+              <div class="camino-detail-inner">
+                <div class="camino-detail-inner-content">
+                  <p class="camino-objective"><span data-lang="es">Conocer lo que tenemos para poder protegerlo.</span><span data-lang="en" hidden>Getting to know what we have so we can protect it.</span></p>
+                  <ul class="camino-projects">
+                    <li><span data-lang="es">Inventarios de biodiversidad de flora y fauna.</span><span data-lang="en" hidden>Flora and fauna biodiversity inventories.</span></li>
+                    <li><span data-lang="es">Exploración y documentación de sitios de interés dentro de la Reserva.</span><span data-lang="en" hidden>Exploration and documentation of points of interest within the reserve.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ETAPA 02 -->
+        <div class="camino-item camino-item-stage reveal" data-status="proximo">
+          <div class="camino-marker"></div>
+          <div class="camino-content">
+            <button type="button" class="camino-summary" aria-expanded="false">
+              <span class="camino-summary-text">
+                <span class="camino-date">2026–2027</span>
+                <h3 class="camino-title"><span data-lang="es">Etapa 02 — Proteger</span><span data-lang="en" hidden>Stage 02 — Protect</span></h3>
+                <span class="camino-status camino-status-proximo"><span data-lang="es">Próximo</span><span data-lang="en" hidden>Upcoming</span></span>
+              </span>
+              <span class="camino-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="camino-detail">
+              <div class="camino-detail-inner">
+                <div class="camino-detail-inner-content">
+                  <p class="camino-objective"><span data-lang="es">Consolidar la protección física y el manejo adecuado del territorio.</span><span data-lang="en" hidden>Consolidating physical protection and proper management of the land.</span></p>
+                  <ul class="camino-projects">
+                    <li><span data-lang="es">Cercado y división según el Plan de Manejo.</span><span data-lang="en" hidden>Fencing and zoning according to the management plan.</span></li>
+                    <li><span data-lang="es">Mejoramiento y adecuación de caminos y senderos.</span><span data-lang="en" hidden>Improving and upgrading roads and trails.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ETAPA 03 -->
+        <div class="camino-item camino-item-stage reveal" data-status="proximo">
+          <div class="camino-marker"></div>
+          <div class="camino-content">
+            <button type="button" class="camino-summary" aria-expanded="false">
+              <span class="camino-summary-text">
+                <span class="camino-date">2027–2029</span>
+                <h3 class="camino-title"><span data-lang="es">Etapa 03 — Restaurar</span><span data-lang="en" hidden>Stage 03 — Restore</span></h3>
+                <span class="camino-status camino-status-proximo"><span data-lang="es">Próximo</span><span data-lang="en" hidden>Upcoming</span></span>
+              </span>
+              <span class="camino-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="camino-detail">
+              <div class="camino-detail-inner">
+                <div class="camino-detail-inner-content">
+                  <p class="camino-objective"><span data-lang="es">Recuperar y fortalecer los ecosistemas del territorio.</span><span data-lang="en" hidden>Recovering and strengthening the land's ecosystems.</span></p>
+                  <ul class="camino-projects">
+                    <li><span data-lang="es">Construcción del vivero de plantas nativas.</span><span data-lang="en" hidden>Building a native-plant nursery.</span></li>
+                    <li><span data-lang="es">Adaptación de suelos para proyectos de restauración.</span><span data-lang="en" hidden>Soil preparation for restoration projects.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ETAPA 04 -->
+        <div class="camino-item camino-item-stage reveal" data-status="proximo">
+          <div class="camino-marker"></div>
+          <div class="camino-content">
+            <button type="button" class="camino-summary" aria-expanded="false">
+              <span class="camino-summary-text">
+                <span class="camino-date">2026–2027</span>
+                <h3 class="camino-title"><span data-lang="es">Etapa 04 — Sostener</span><span data-lang="en" hidden>Stage 04 — Sustain</span></h3>
+                <span class="camino-status camino-status-proximo"><span data-lang="es">Próximo</span><span data-lang="en" hidden>Upcoming</span></span>
+              </span>
+              <span class="camino-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="camino-detail">
+              <div class="camino-detail-inner">
+                <div class="camino-detail-inner-content">
+                  <p class="camino-objective"><span data-lang="es">Desarrollar sistemas que permitan que la Reserva funcione de manera cada vez más autónoma y sostenible.</span><span data-lang="en" hidden>Developing systems that let the reserve operate in an increasingly self-sufficient and sustainable way.</span></p>
+                  <ul class="camino-projects">
+                    <li><span data-lang="es">Energía solar.</span><span data-lang="en" hidden>Solar power.</span></li>
+                    <li><span data-lang="es">Energía hidráulica.</span><span data-lang="en" hidden>Hydro power.</span></li>
+                    <li><span data-lang="es">Huerta autosostenible.</span><span data-lang="en" hidden>A self-sustaining garden.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ETAPA 05 -->
+        <div class="camino-item camino-item-stage reveal" data-status="proximo">
+          <div class="camino-marker"></div>
+          <div class="camino-content">
+            <button type="button" class="camino-summary" aria-expanded="false">
+              <span class="camino-summary-text">
+                <span class="camino-date">2027–2029</span>
+                <h3 class="camino-title"><span data-lang="es">Etapa 05 — Recibir</span><span data-lang="en" hidden>Stage 05 — Welcome</span></h3>
+                <span class="camino-status camino-status-proximo"><span data-lang="es">Próximo</span><span data-lang="en" hidden>Upcoming</span></span>
+              </span>
+              <span class="camino-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="camino-detail">
+              <div class="camino-detail-inner">
+                <div class="camino-detail-inner-content">
+                  <p class="camino-objective"><span data-lang="es">Crear la infraestructura necesaria para recibir personas y desarrollar actividades relacionadas con la conservación.</span><span data-lang="en" hidden>Creating the infrastructure needed to host people and carry out conservation-related activities.</span></p>
+                  <ul class="camino-projects">
+                    <li><span data-lang="es">Kiosco para trabajo, reuniones y eventos.</span><span data-lang="en" hidden>A kiosk for work, meetings, and events.</span></li>
+                    <li><span data-lang="es">Cabina de baños.</span><span data-lang="en" hidden>A bathroom cabin.</span></li>
+                    <li><span data-lang="es">Dos cabañas iniciales para hospedar grupos.</span><span data-lang="en" hidden>Two initial cabins to host groups.</span></li>
+                  </ul>
+                  <p data-lang="es">No estamos construyendo infraestructura simplemente porque sí: estamos creando lo necesario para que la Reserva pueda recibir personas y cumplir sus objetivos de conservación.</p>
+                  <p data-lang="en" hidden>We're not building infrastructure just for the sake of it: we're creating what's needed so the reserve can host people and fulfill its conservation goals.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="camino-track-fade" aria-hidden="true"></div>
+
+        <div class="camino-end reveal">
+          <p data-lang="es">Y esto apenas comienza.</p>
+          <p data-lang="en" hidden>And this is only the beginning.</p>
+          <p data-lang="es">La Reserva seguirá creciendo, aprendiendo y transformándose. Nuevos proyectos surgirán de las necesidades del territorio y de todo lo que descubramos en el camino.</p>
+          <p data-lang="en" hidden>The reserve will keep growing, learning, and transforming. New projects will emerge from the needs of the land and everything we discover along the way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FUNDACION CUACHA ===================== -->
+  <section class="section section-cuacha" id="fundacion-cuacha">
+    <div class="container">
+      <div class="section-head">
+        <h2>
+          <span data-lang="es">Fundación Cuacha</span>
+          <span data-lang="en" hidden>Fundación Cuacha</span>
+        </h2>
+        <p class="section-lede" data-lang="es">La Fundación Cuacha nace para darle estructura formal a nuestro trabajo de conservación. Su objeto es la conservación, restauración y recuperación de ecosistemas, la investigación científica, la educación ambiental y el desarrollo sostenible del territorio.</p>
+        <p class="section-lede" data-lang="en" hidden>Fundación Cuacha was created to give our conservation work a formal structure. Its purpose is the conservation, restoration, and recovery of ecosystems, scientific research, environmental education, and sustainable development of the territory.</p>
+
+        <p class="section-lede" data-lang="es">Recién la registramos y todavía estamos en proceso de formalización, así que por ahora no contamos con canales de donación. Si quieres saber más sobre la fundación o mantenerte al tanto de su desarrollo, escríbenos.</p>
+        <p class="section-lede" data-lang="en" hidden>We just registered it and are still in the process of formalizing it, so for now we don't have donation channels available. If you'd like to learn more about the foundation or stay updated on its progress, write to us.</p>
+
+        <a href="#contacto" class="btn btn-primary">
+          <span data-lang="es">Escríbenos</span>
+          <span data-lang="en" hidden>Write to us</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO / APOYANOS ===================== -->
+  <section class="section section-dark" id="contacto">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">
+          <span data-lang="es">Involúcrate</span>
+          <span data-lang="en" hidden>Get Involved</span>
+        </p>
+        <h2>
+          <span data-lang="es">Hablemos</span>
+          <span data-lang="en" hidden>Let's talk</span>
+        </h2>
+        <p class="section-lede" data-lang="es">Ya sea que quieras donar a través de Fundación Cuacha, apadrinar árboles para la restauración, proponer un proyecto de investigación, visitar la reserva, o simplemente saber más — escríbenos por el formulario, correo o WhatsApp/llamada.</p>
+        <p class="section-lede" data-lang="en" hidden>Whether you want to donate through Fundación Cuacha, sponsor trees for restoration, propose a research project, visit the reserve, or simply learn more — reach out via the form, email, or WhatsApp/call.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3><span data-lang="es">Formas de apoyar</span><span data-lang="en" hidden>Ways to help</span></h3>
+          <ul class="support-list">
+            <li>
+              <strong data-lang="es">Donar</strong><strong data-lang="en" hidden>Donate</strong>
+              <span data-lang="es">a través de Fundación Cuacha. Aún no tenemos pasarela de pago en línea — escríbenos por el formulario, correo o WhatsApp/llamada y coordinamos tu aporte directamente.</span>
+              <span data-lang="en" hidden>through Fundación Cuacha. We don't have an online payment gateway yet — reach out via the form, email, or WhatsApp/call and we'll arrange your contribution directly.</span>
+            </li>
+            <li>
+              <strong data-lang="es">Apadrinar árboles</strong><strong data-lang="en" hidden>Sponsor trees</strong>
+              <span data-lang="es">para el vivero y la restauración de las ~7 hectáreas de potrero. Contáctanos para conocer cómo apadrinar árboles de la reserva.</span>
+              <span data-lang="en" hidden>for the nursery and the restoration of nearly 7 hectares of pastureland. Contact us to find out how to sponsor trees for the reserve.</span>
+            </li>
+            <li>
+              <strong data-lang="es">Visitar</strong><strong data-lang="en" hidden>Visit</strong>
+              <span data-lang="es">la reserva no tiene alojamiento turístico abierto todavía, pero si te interesa una visita —individual, académica o institucional— escríbenos y lo conversamos.</span>
+              <span data-lang="en" hidden>the reserve doesn't have tourism lodging open yet, but if you're interested in a visit — individual, academic, or institutional — write to us and let's talk.</span>
+            </li>
+            <li>
+              <strong data-lang="es">Colaborar</strong><strong data-lang="en" hidden>Collaborate</strong>
+              <span data-lang="es">si representas una universidad, colegio o institución interesada en investigación o educación ambiental.</span>
+              <span data-lang="en" hidden>if you represent a university, school, or institution interested in research or environmental education.</span>
+            </li>
+            <li>
+              <strong data-lang="es">Compartir</strong><strong data-lang="en" hidden>Spread the word</strong>
+              <span data-lang="es">cuéntale a alguien sobre la reserva. El primer paso de la conservación comunitaria es que más personas la conozcan.</span>
+              <span data-lang="en" hidden>tell someone about the reserve. The first step in community conservation is more people knowing it exists.</span>
+            </li>
+          </ul>
+
+          <h3><span data-lang="es">Contacto directo</span><span data-lang="en" hidden>Direct contact</span></h3>
+          <ul class="contact-details">
+            <li><a href="mailto:reservalaspalmas.sj@gmail.com">reservalaspalmas.sj@gmail.com</a></li>
+            <li>
+              <a href="tel:+573203444264">+57 320 344 4264</a> <span data-lang="es">(Nicolás)</span><span data-lang="en" hidden>(Nicolás)</span>
+              · <a href="https://wa.me/573203444264" target="_blank" rel="noopener">WhatsApp</a>
+            </li>
+            <li>
+              <a href="tel:+573177777215">+57 317 777 7215</a> <span data-lang="es">(María Emilia)</span><span data-lang="en" hidden>(María Emilia)</span>
+              · <a href="https://wa.me/573177777215" target="_blank" rel="noopener">WhatsApp</a>
+            </li>
+            <li><span data-lang="es">San Juanito, Meta — Vereda San Luis de Toledo, Colombia</span><span data-lang="en" hidden>San Juanito, Meta — San Luis de Toledo district, Colombia</span></li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xyegklqn" method="POST">
+          <div class="form-row">
+            <label for="name"><span data-lang="es">Nombre</span><span data-lang="en" hidden>Name</span></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-row">
+            <label for="email"><span data-lang="es">Correo electrónico</span><span data-lang="en" hidden>Email</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label for="reason"><span data-lang="es">Motivo de contacto</span><span data-lang="en" hidden>Reason for contact</span></label>
+            <select id="reason" name="reason">
+              <option data-lang="es" value="Donación">Donación</option>
+              <option data-lang="en" hidden value="Donation">Donation</option>
+              <option data-lang="es" value="Investigación / institución">Investigación / institución</option>
+              <option data-lang="en" hidden value="Research / institution">Research / institution</option>
+              <option data-lang="es" value="Visita futura">Visita futura</option>
+              <option data-lang="en" hidden value="Future visit">Future visit</option>
+              <option data-lang="es" value="Otro">Otro</option>
+              <option data-lang="en" hidden value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message"><span data-lang="es">Mensaje</span><span data-lang="en" hidden>Message</span></label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span data-lang="es">Enviar mensaje</span>
+            <span data-lang="en" hidden>Send message</span>
+          </button>
+          <p class="form-note">
+            <span data-lang="es">También puedes escribirnos directamente a <a href="mailto:reservalaspalmas.sj@gmail.com">reservalaspalmas.sj@gmail.com</a>.</span>
+            <span data-lang="en" hidden>You can also email us directly at <a href="mailto:reservalaspalmas.sj@gmail.com">reservalaspalmas.sj@gmail.com</a>.</span>
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-brand-top">
+        <img src="assets/img/logo.jpg" alt="Reserva Las Palmas" class="brand-mark">
+        <a class="footer-social" href="https://www.instagram.com/reservalaspalmas.sj?igsh=MXRkOXQwZ3k2cmlqaw==" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </a>
+      </div>
+      <p data-lang="es">Reserva natural privada de bosque andino en San Juanito, Meta, Colombia. Miembro de RESNATUR.</p>
+      <p data-lang="en" hidden>Private Andean cloud forest nature reserve in San Juanito, Meta, Colombia. RESNATUR member.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#inicio"><span data-lang="es">Inicio</span><span data-lang="en" hidden>Home</span></a>
+      <a href="#quienes-somos"><span data-lang="es">Quiénes somos</span><span data-lang="en" hidden>About us</span></a>
+      <a href="#la-reserva"><span data-lang="es">La Reserva</span><span data-lang="en" hidden>The Reserve</span></a>
+      <a href="#nuestro-camino"><span data-lang="es">Nuestro Camino</span><span data-lang="en" hidden>Our Journey</span></a>
+      <a href="#fundacion-cuacha">Fundación Cuacha</a>
+      <a href="#contacto"><span data-lang="es">Contacto</span><span data-lang="en" hidden>Contact</span></a>
+    </nav>
+    <p class="footer-copy">
+      <span data-lang="es">© 2026 Reserva Las Palmas. Hecho con cariño desde los Andes.</span>
+      <span data-lang="en" hidden>© 2026 Reserva Las Palmas. Made with care from the Andes.</span>
+    </p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="js/reserve-map.js"></script>
+<script src="js/camino.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
