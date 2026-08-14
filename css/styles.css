@@ -262,10 +262,17 @@ html[lang="en"] .lang-toggle-en{ opacity:1; }
 .section-grid-reverse{ grid-template-columns: 1.1fr .9fr; }
 .section-grid-reverse .section-media{ order:2; }
 
+/* La Reserva intro: text gets most of the width, logo stays modest and un-cropped */
+.section-grid-logo{ grid-template-columns: 1.3fr .7fr; align-items:start; }
+
 .section-media{ position:relative; }
 .section-media img{
   width:100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);
   aspect-ratio: 4/5; object-fit:cover;
+}
+.section-media.section-media-logo{ display:flex; justify-content:center; }
+.section-media.section-media-logo img{
+  width:100%; max-width:220px; aspect-ratio:auto; object-fit:contain;
 }
 
 /* Gallery / carousel — same footprint as a plain .section-media image */
